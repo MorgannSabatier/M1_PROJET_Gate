@@ -1,0 +1,6 @@
+time.lst:IndiquateurTemps:MomentdelaJournée
+time_ampm.lst:IndiquateurTemps:AMouPM
+time_key.lst:IndiquateurTemps:Clés
+time_modifier.lst:IndiquateurTemps:Modifieur
+times.lst:IndiquateurTemps:Spécifique
+timespan.lst:IndiquateurTemps:Unité

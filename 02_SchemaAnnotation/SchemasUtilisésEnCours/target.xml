@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <element name="target">
+    <complexType>
+      <attribute name="id" type="kind"/>
+      <attribute name="target-uncertain" default="somewhat-uncertain">
+        <simpleType>
+          <restriction base="string">
+            <enumeration value="somewhat-uncertain" />
+            <enumeration value="very-uncertain" />
+          </restriction>
+        </simpleType>
+      </attribute>
+    </complexType>
+  </element>
+</schema>

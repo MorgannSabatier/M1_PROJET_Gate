@@ -1,0 +1,18 @@
+Phase: TrouverPersonnage
+Input: TrouverPhraseTempAction Token SpaceToken Sentence
+Options: control = all
+
+Rule: TrouverPersonnage
+
+
+(
+	{Token.category == "WRB"}
+	({Token.kind=="word"} | {SpaceToken})*
+	{Token.string ==","}
+	({Token.kind=="word"} | {SpaceToken})*
+	)
+(
+	{Token.string == "Lennie"} | {Token.string == "George"} 
+	):perso
+-->
+:perso.TrouverPersonnage = {rule="TrouverPersonnage"}

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2000/10/XMLSchema">
+	<!-- XSchema deffinition for token-->
+	<element name="Lieu">
+	  	<complexType>
+	    	<attribute name="kind"  use="optional">
+		  		<simpleType>
+		    		<restriction base="string">
+						 <enumeration value="Ville"/>
+						 <enumeration value="Quartier"/>
+						 <enumeration value="Pays"/>
+						 <enumeration value="Rue"/>
+						 <enumeration value="LieuExtérieur"/>
+						 <enumeration value="LieuIntérieur"/>
+						 <enumeration value="LieuPublic"/>
+						 <enumeration value="Rivière"/>
+						 <enumeration value="Montagne"/>	 	 	  			  
+			    	</restriction>
+				</simpleType>	 
+			</attribute>
+	  	</complexType>
+	</element>
+</schema>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <element name="expressive-subjectivity">
+    <complexType>
+      <attribute name="nested-source" type="kind"/>
+      <attribute name="nested-source-uncertain" default="somewhat-uncertain">
+	<simpleType>
+	  <restriction base="string">
+	    <enumeration value="somewhat-uncertain" />
+	    <enumeration value="very-uncertain" />
+	  </restriction>
+	</simpleType>
+      </attribute>
+      <attribute name="es-uncertain" default="es-uncertain">
+	<simpleType>
+	  <restriction base="string">
+	    <enumeration value="somewhat-uncertain" />
+	    <enumeration value="very-uncertain" />
+	  </restriction>
+	</simpleType>
+      </attribute>
+      <attribute name="expression-intensity" default="low">
+	<simpleType>
+	  <restriction base="string">
+	    <enumeration value="low" />
+	    <enumeration value="medium" />
+	    <enumeration value="high" />
+	    <enumeration value="extreme" />
+	  </restriction>
+	</simpleType>
+      </attribute>
+      <attribute name="polarity" default="negative">
+       <simpleType>
+         <restriction> base="string">
+           <enumeration value="positive" />
+           <enumeration value="negative" />
+           <enumeration value="both" />
+           <enumeration value="neutral" />
+           <enumeration value="uncertain-positive" />
+           <enumeration value="uncertain-negative" />
+           <enumeration value="uncertain-neutral" />
+           <enumeration value="uncertain-both" />
+          </restriction>
+        </simpleType>
+      </attribute>
+    </complexType>
+  </element>
+</schema>

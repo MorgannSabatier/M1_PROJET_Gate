@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <element name="objective-speech">
+    <complexType>
+          <attribute name="annotation-uncertain" default="somewhat-uncertain">
+            <simpleType>
+              <restriction base="string">
+                <enumeration value="somewhat-uncertain" />
+                <enumeration value="very-uncertain" />
+              </restriction>
+            </simpleType>
+          </attribute>
+          <attribute name="nested-source" type="kind"/>
+          <attribute name="insubstantial" type="kind" />
+          <attribute name="implicit" default="true">
+            <simpleType>
+              <restriction base="string">
+                <enumeration value="true" />
+              </restriction>
+            </simpleType>
+          </attribute>
+          <attribute name="objective-uncertain" default="somewhat-uncertain">
+            <simpleType>
+              <restriction base="string">
+                <enumeration value="somewhat-uncertain" />
+                <enumeration value="very-uncertain" />
+              </restriction>
+            </simpleType>
+          </attribute>
+    </complexType>
+  </element>
+</schema>

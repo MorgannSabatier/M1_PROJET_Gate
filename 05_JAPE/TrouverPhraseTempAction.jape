@@ -1,0 +1,16 @@
+Phase: TrouverPhraseTempAction
+Input: Token SpaceToken Sentence
+Options: control = appelt
+
+Rule: TrouverQuestion
+
+(
+	({Token.kind=="word"} | {SpaceToken})*
+	{Sentence contains Token.category=="WRB"}
+	({Token.kind=="word"} | {SpaceToken})*
+	{Token.string ==","}
+	({Token.kind=="word"} | {SpaceToken})*
+	{Token.string =="."}
+):aa
+-->
+:aa.TrouverPhraseTempAction = {rule="PhraseTempAction"}

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <element name="agent">
+    <complexType>
+	  <attribute name="id" type="kind"/>
+	  <attribute name="agent-uncertain" default="somewhat-uncertain">
+	    <simpleType>
+	      <restriction base="string">
+		<enumeration value="somewhat-uncertain"/>
+		<enumeration value="very-uncertain"/>
+	      </restriction>
+	    </simpleType>
+	  </attribute>
+	  <attribute name="nested-source" type="kind"/>
+    </complexType>
+  </element>
+</schema>

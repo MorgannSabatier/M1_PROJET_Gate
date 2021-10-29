@@ -1,0 +1,18 @@
+Phase: TrouverPersonnage
+Input: TrouverPhraseTempAction Token SpaceToken Sentence
+Options: control = appelt
+
+Rule: TrouverVerbeAction
+
+
+(
+	{Token.category == "VRB"}
+	({Token.kind=="word"} | {SpaceToken})*
+	{Token.string ==","}
+	({Token.kind=="word"} | {SpaceToken})*
+	)
+(
+	{Token.category == "VB"} | {Token.category == "VBD"} | {Token.category == "VBG"} | {Token.category == "VBN"} | {Token.category == "VBP"} |{Token.category == "VBZ"}
+):perso
+-->
+:perso.TrouverVerbe = {rule="TrouverVerbe"}

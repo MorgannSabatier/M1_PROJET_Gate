@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <element name="attitude">
+    <complexType>
+      <attribute name="id" type="kind"/>
+      <attribute name="attitude-type" default="sentiment-neg">
+        <simpleType>
+          <restriction base="string">
+             <enumeration value="sentiment-pos" />
+             <enumeration value="sentiment-neg" />
+             <enumeration value="agree-pos" />
+             <enumeration value="agree-neg" />
+             <enumeration value="intention-pos" />
+             <enumeration value="intention-neg" />
+             <enumeration value="arguing-pos" />
+             <enumeration value="arguing-neg" />
+             <enumeration value="speculation" />
+             <enumeration value="other-attitude" />
+          </restriction>
+        </simpleType>
+      </attribute>
+      <attribute name="target-link" type="kind"/>
+      <attribute name="intensity" default="low">
+        <simpleType>
+          <restriction base="string">
+            <enumeration value="low" />
+            <enumeration value="low-medium" />
+            <enumeration value="medium" />
+            <enumeration value="medium-high" />
+            <enumeration value="high" />
+            <enumeration value="high-extreme" />
+          </restriction>
+        </simpleType>
+      </attribute>
+      <attribute name="inferred" default="yes">
+	<simpleType>
+	  <restriction base="string">
+	    <enumeration value="yes" />
+	  </restriction>
+	</simpleType>
+      </attribute>
+      <attribute name="sarcastic" default="yes">
+	<simpleType>
+	  <restriction base="string">
+	    <enumeration value="yes" />
+	  </restriction>
+	</simpleType>
+      </attribute>
+      <attribute name="repetition" default="yes" >
+	<simpleType>
+	  <restriction base="string">
+	    <enumeration value="yes" />
+	  </restriction>
+	</simpleType>
+      </attribute>
+      <attribute name="contrast" default="yes">
+	<simpleType>
+	  <restriction base="string">
+	    <enumeration value="yes" />
+	  </restriction>
+	</simpleType>
+      </attribute>
+      <attribute name="attitude-uncertain" default="somewhat-uncertain">
+        <simpleType>
+          <restriction base="string">
+            <enumeration value="somewhat-uncertain" />
+            <enumeration value="very-uncertain" />
+          </restriction>
+        </simpleType>
+      </attribute>
+    </complexType>
+  </element>
+</schema>
